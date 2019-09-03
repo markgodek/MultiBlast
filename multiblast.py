@@ -12,8 +12,8 @@ with open(output, 'a+') as output_handle:
         print(filename)
         with open(filename, 'rU') as fasta_handle:
             result_handle = NCBIWWW.qblast('blastn', 'nt',
-                                           fasta_handle.read(), hitlist_size=5)
-            blast_results = SearchIO.parse(result_handle, 'blast-xml')
+                                           fasta_handle.read(), hitlist_size=5) # do the actual blast search
+            blast_results = SearchIO.parse(result_handle, 'blast-xml')          # parse the results without storing them
             for result in blast_results:
                 i = 1
                 for hsp in result.hsps:
