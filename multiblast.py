@@ -8,6 +8,7 @@ output = sys.argv[2]
 # /home/mark/PycharmProjects/MultiBlast/demoFASTAs
 
 with open(output, 'a+') as output_handle:
+    # open each file and print the filename to the terminal
     for filename in glob.glob(os.path.join(input, '*.fasta')):
         print(filename)
         with open(filename, 'rU') as fasta_handle:
