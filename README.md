@@ -14,4 +14,5 @@ $ multiblastcli
 Usage:
 
   $ pip install --editable .
+  
   $ multiblastcli PATHto/demoFASTAs -o PATHto/my_results.txt
